@@ -262,7 +262,12 @@ opacity: 1;
     }
 
     .roster,
-    .ach,
+    .ach{
+
+    font-size: 40px;
+
+
+    }
     .about {
         font-size: 50px; /* Уменьшаем размер шрифта заголовков */
     }
