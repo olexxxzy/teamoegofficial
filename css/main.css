@@ -284,10 +284,10 @@ opacity: 1;
     }
 
     .upward {
-        width: 25px;
-        height: 25px;
-        bottom: 20px;
-        right: 20px;
+        width: 5px;
+        height: 5px;
+        bottom: 40px;
+        right: 40px;
     }
 
     #popup {
