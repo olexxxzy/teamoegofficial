@@ -242,6 +242,7 @@ opacity: 1;
         height: auto; /* Высота автоматически рассчитывается по содержимому */
         background-size: contain; /* Изменяем размер фона */
         border-radius: 0; /* Убираем скругления углов */
+        width: auto;
     }
 
     .nav {
