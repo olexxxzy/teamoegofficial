@@ -1,0 +1,425 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+        font-family: "Roboto", sans-serif;
+}
+
+
+
+.header {
+
+    padding: 21px 0 100px ;
+    height: 850px;
+    background-color: black;
+    background-image: url('./../img/b5.svg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    border-radius: 0 0 54px 54px;
+
+}
+
+.header#blur.active{
+    filter: blur(20px);
+}
+
+
+.header a {
+    color: white;
+}
+
+
+.container {
+   
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 0 16px;
+
+
+}
+
+
+
+
+.container--header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+
+}
+
+
+.nav {
+    height: 150px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.nav-list {
+    display: flex;
+    column-gap: 70px;
+    font-size: 40px;
+    font-weight: 300;
+    font-weight: bold;
+}
+.nav-list__item {
+    opacity: 0.9;
+
+}
+
+.nav-list__link--active {
+    opacity: 1;
+
+}
+
+.roster {
+
+    font-size: 80px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black; /* Толщина и цвет обводки */
+
+
+
+}
+
+.playerphotos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.playerphotos#blur.active{
+    filter: blur(20px);
+}
+
+.olex:hover {
+    transform: scale(1.05); 
+    transition: 1s;
+   }
+
+.lixemao:hover {
+    transform: scale(1.05); 
+    transition: 1s;
+   }
+
+
+.isack:hover {
+    transform: scale(1.05); 
+    transition: 1s;
+   }
+
+
+
+.playernames {
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+.ach {
+    font-size: 80px;
+    text-align:center;
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black; /* Толщина и цвет обводки */
+ 
+}
+.ach#blur.active{
+    filter: blur(20px);
+}
+
+.teamach#blur.active{
+    filter: blur(20px);
+}
+.teamach {
+    display: list-item;
+    font-size: 80px;
+    font-weight: 300; 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tournaments {
+margin: 100px;
+
+
+
+}
+
+.about {
+    font-size: 80px;
+    text-align:center;
+    padding: 20px;
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke: 3px black; /* Толщина и цвет обводки */
+
+
+}
+
+.aboutus {
+   font-size: 35px;
+   text-align:center;
+   padding: 20px;
+
+
+}
+
+.upward {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background:url(upward.png);
+    background-size: cover;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+
+
+
+
+}
+
+.upward.active{
+visibility: visible;
+opacity: 1;
+
+
+}
+
+#popup {
+    position: fixed;
+    top: 40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:600px;
+    padding: 50px; 
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    background: #fff;
+
+}
+
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+/* Общие стили */
+
+/* Добавляем стили для мобильных устройств (ширина экрана до 768px) */
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 10px 0; /* Уменьшаем верхний и нижний отступы */
+        height: auto; /* Высота автоматически рассчитывается по содержимому */
+        background-size: contain; /* Изменяем размер фона */
+        border-radius: 0; /* Убираем скругления углов */
+    }
+
+    .nav {
+        height: auto; /* Высота автоматически рассчитывается по содержимому */
+        flex-direction: column; /* Меняем направление флексбокса на вертикальное */
+        align-items: center; /* Выравниваем элементы по центру по вертикали */
+    }
+
+    .img{
+    width: 128;
+    height: 128;
+    }
+
+    }
+    .nav-list {
+        column-gap: 10px; /* Уменьшаем расстояние между элементами меню */
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    .roster,
+    .ach,
+    .about {
+        font-size: 50px; /* Уменьшаем размер шрифта заголовков */
+    }
+
+    .playerphotos {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .teamach,
+    .aboutus {
+        font-size: 20px; /* Уменьшаем размер шрифта текста */
+    }
+
+    .upward {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #popup {
+        width: 90%; /* Задаем ширину всплывающего окна в процентах */
+        max-width: 400px; /* Максимальная ширина всплывающего окна */
+        padding: 30px; /* Уменьшаем внутренние отступы */
+    }
+    
+
+    
+.merchselect {
+    height: 550px;
+    width: 500px;
+
+}
+
+.shirtname {
+    font-size: 40px;
+    text-align: left;
+    margin: 0 0 0 100px;
+
+
+
+
+}
+
+
+
+.shirt:hover {
+    transform: scale(1.01); 
+    transition: 1s;
+    filter: blur(5px);
+    
+}
+
+.price {
+
+    margin: 0 0 0 50%;
+
+}
+.cart {
+    position: absolute;
+    height: 700px;
+    width: 500px;
+    left:70% ; 
+    top: 102%;
+
+    display: flex;
+    justify-content: right;
+}
+
+.cartname {
+    font-size: 50px;
+    text-align: left;
+    
+
+}
+footer{
+    background-color: #111;
+    background-image: url('./../img/b5.svg');
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    background-image: url('./../img/b5.svg');
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
